@@ -128,20 +128,9 @@ st.markdown("---")
 st.subheader("Research Note")
 st.write("Download the full research note on macroeconomic indicators, methodologies, and trends for Asian countries.")
 
-# Absolute path to the PDF
-pdf_path = r"C:\Users\Asus1\Desktop\Economic Dashboard\Asian_Macroeconomic_Research_Note.pdf"
-
-try:
-    with open(pdf_path, "rb") as f:
-        pdf_data = f.read()
-    st.download_button(
-        label="Download Research Note PDF",
-        data=pdf_data,
-        file_name="Asian_Macroeconomic_Research_Note.pdf",
-        mime="application/pdf"
-    )
-except FileNotFoundError:
-    st.error(r"PDF file not found. Please ensure 'Asian_Macroeconomic_Research_Note.pdf' is in: C:\Users\Asus1\Desktop\Economic Dashboard")
+# Link to PDF on GitHub
+pdf_url = "https://github.com/AarchiGoyal-Asian-economic-dashboard/asian-economic-dashboard/raw/main/Asian_Macroeconomic_Research_Note.pdf"  
+st.markdown(f"[Download Research Note PDF]({pdf_url})", unsafe_allow_html=True)
 
 # Country Comparison Section
 st.subheader("Compare Two Countries")
